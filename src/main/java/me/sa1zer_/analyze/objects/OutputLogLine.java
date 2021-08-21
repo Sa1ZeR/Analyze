@@ -26,6 +26,6 @@ public class OutputLogLine {
 
     @Override
     public String toString() {
-        return startTime + "\t" + endTime + "\t" + percentage;
+        return startTime + "\t" + endTime + "\t" + String.format("%.1f", percentage);
     }
 }

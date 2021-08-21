@@ -67,6 +67,14 @@ public class ReadManager extends Thread {
     }
 
     private double calculatePercentage() {
-        return (double) (failedCount * 100 / logCount);
+        return 100.0 - ((double) failedCount * 100 / logCount);
+    }
+
+    public long getFailedCount() {
+        return failedCount;
+    }
+
+    public Set<OutputLogLine> getFailedLogs() {
+        return failedLogs;
     }
 }

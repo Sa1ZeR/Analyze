@@ -1,3 +1,5 @@
 .idea
 target/
 *.iml
+access_test.log
+access_big.log

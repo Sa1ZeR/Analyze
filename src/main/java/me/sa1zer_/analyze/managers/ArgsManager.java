@@ -20,13 +20,9 @@ public class ArgsManager {
         fileName = "access.log"; //set default filename
     }
 
-    public void verifyStart() {
+    public void verifyStart() throws WrongTimeException, WrongAvailableException {
         if(argsIsEmpty()) throw new IllegalArgumentException("Arguments count must be greater than 0");
-        try {
-            readArgs();
-        } catch (WrongAvailableException | WrongTimeException e) {
-            e.printStackTrace();
-        }
+        readArgs();
     }
 
     private boolean argsIsEmpty() {
